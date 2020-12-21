@@ -21,10 +21,12 @@ hero-text-color: #ffffff;
   --background-team: #f5f4fa;
   --logo2-color: #000000;
   --hero-text-color: #ffffff;
-  --font-base: Raleway, sans-serif;
-  --font-base2: Roboto, sans-serif;
+  --font-base: 'Raleway', sans-serif;
+  --font-base2: 'Roboto', sans-serif;
   --border-color1: #eeeeee;
   --icon-color: #afb1b8;
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 a {
   text-decoration: none;
@@ -145,6 +147,7 @@ img {
 .header-tel:hover,
 .header-tel:focus {
   color: var(--logo1-active-link-text-color);
+  transition: color 250ms var(--timing-function);
 }
 
 .accent-color {
@@ -185,6 +188,7 @@ img {
 .address-icon {
   margin-right: 10px;
   fill: currentColor;
+  vertical-align: middle;
 }
 
 /* Hero */
@@ -194,6 +198,7 @@ img {
   min-height: 600px;
 
   min-height: 600px;
+  width: 1600px;
   margin: 0 auto;
   text-align: center;
   background-color: var(--background-team);
@@ -400,6 +405,7 @@ img {
 .team-social-link:focus {
   background-color: var(--logo1-active-link-text-color);
   color: var(--background-base-nav-button-text);
+  transition: color 250ms var(--timing-function);
 }
 .team-icon {
   fill: currentColor;
@@ -445,8 +451,8 @@ img {
 
 /* our client */
 .clients {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .clients-list {
   display: flex;
@@ -467,6 +473,7 @@ img {
 .clients-link:focus {
   color: var(--logo1-active-link-text-color);
   border-color: var(--logo1-active-link-text-color);
+  transition: color 250ms var(--timing-function);
 }
 .clients-icon {
   width: 45;
@@ -498,7 +505,6 @@ img {
   letter-spacing: 0.03em;
 
   display: inline-block;
-  margin-bottom: 20px;
 }
 
 /* footer address */
@@ -516,6 +522,7 @@ img {
 .footer-address-list {
   display: flex;
   margin-bottom: 9px;
+  margin-top: 20px;
 }
 .footer-address-listend {
   display: flex;
@@ -559,6 +566,7 @@ img {
 .footer-social-link:focus {
   background-color: var(--logo1-active-link-text-color);
   outline: none;
+  transition: color 250ms var(--timing-function);
 }
 .footer-social-icon {
   fill: var(--background-base-nav-button-text);
@@ -588,7 +596,7 @@ img {
   justify-content: center;
   margin-bottom: 50px;
 }
-.button-menu-item {
+.button-menu-item:not(:first-child) {
   border: none;
   margin-left: 8px;
 }
@@ -601,7 +609,8 @@ img {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--background-base-nav-button-text) back;
+  color: var(--feature-title-text-color);
+  background-color: var(--background-team);
   border: none;
   border-radius: 4px;
   outline: none;
@@ -614,9 +623,13 @@ img {
 }
 /* .menu-button.accent-color, */
 .menu-button:hover,
-.menu-button :focus {
+.menu-button:focus {
   color: var(--background-base-nav-button-text);
   background-color: var(--logo1-active-link-text-color);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 /* color: var(--feature-title-text-color);
@@ -638,10 +651,6 @@ img {
 .card-item {
   width: calc((100% - 2 * 30px) / 3);
   margin-right: 30px;
-}
-.card-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-item:nth-child(3n) {
@@ -672,9 +681,10 @@ img {
 }
 .portfolio-title:hover,
 .portfolio-title:focus,
-.portfolio-p:hover,
-.portfolio-p:focus {
+/* .portfolio-p:hover,
+.portfolio-p:focus */ {
   color: var(--logo1-active-link-text-color);
+  transition: color 250ms var(--timing-function);
 }
 .card-link {
   display: block;
@@ -689,6 +699,12 @@ img {
   border-right: 1px solid var(--border-color1);
   border-bottom: 1px solid var(--border-color1);
 }
+.card-title-container:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: color 250ms var(--timing-function);
+}
+
 /* social */
 .social-list {
   display: flex;
@@ -708,11 +724,13 @@ img {
 .social-list__link:hover,
 .social-list__link:focus {
   background-color: #000;
+  transition: color 250ms var(--timing-function);
 }
 
 .social-list__link:hover .social-list__icon,
 .social-list__link:focus .social-list__icon {
   fill: var(--accent-color);
+  transition: color 250ms var(--timing-function);
 }
 
 .social-list__icon {
