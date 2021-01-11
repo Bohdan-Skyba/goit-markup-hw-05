@@ -149,6 +149,24 @@ img {
   color: var(--logo1-active-link-text-color);
   transition: color 250ms var(--timing-function);
 }
+.navigation-list-accent-color {
+  position: relative;
+
+  color: var(--logo1-active-link-text-color);
+}
+
+.navigation-list-accent-color::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+
+  background-color: var(--logo1-active-link-text-color);
+}
 
 .accent-color {
   color: var(--logo1-active-link-text-color);
@@ -351,6 +369,22 @@ img {
   margin-top: 0;
   margin-bottom: 50px;
   text-align: center;
+}
+.services-label {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.label-text {
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  text-align: center;
+  color: var(--background-team);
 }
 /* .servse-title-text:hover,
 .servse-title-text:focus{
@@ -689,6 +723,40 @@ img {
 .card-link {
   display: block;
 }
+
+.portfolio-card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.thumb-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition: color 250ms var(--timing-function),
+    transform 250ms var(--timing-function);
+  transform: translateY(100%);
+}
+.card-link:hover .thumb-overlay,
+.card-link:focus .thumb-overlay {
+  transform: translateY(0);
+}
+.card-descr {
+  width: 322px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--background-team);
+}
+
 .card-title-container {
   width: 370px;
   padding-top: 20px;
@@ -699,7 +767,7 @@ img {
   border-right: 1px solid var(--border-color1);
   border-bottom: 1px solid var(--border-color1);
 }
-.card-title-container:hover {
+.card-item:hover .card-title-container {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   transition: color 250ms var(--timing-function);
