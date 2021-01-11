@@ -49,7 +49,7 @@
         <section class="hero">
         <div class="container">
             <h1 class="hero-title" lang="ru">Эффективные решения для вашего бизнеса</h1>
-            <button class="butoon-hero" type="button">Заказать услугу</button>
+            <button class="butoon-hero" type="button" data-modal-open>Заказать услугу</button>
         </div>
         </section>
         <!-- FEATURE  -->
@@ -362,6 +362,18 @@
 </div>
 </div>
 </footer>
+
+<!-- modal window -->
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal-window">
+        <button type="button" class="modal-close-btn" data-modal-close>
+            <svg class="close-icon" width="18" height="18">
+                <use href="./icons/sprite.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
 <script src="./js/modal.js"></script>
 </body>
 </html>
