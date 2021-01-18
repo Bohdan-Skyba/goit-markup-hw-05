@@ -354,6 +354,9 @@ img {
   display: flex;
   justify-content: space-between;
 }
+.services-list-item {
+  position: relative;
+}
 
 .servse-title-text,
 .team-title-text,
@@ -408,15 +411,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-/* .team-title-text {
-  color: var(--feature-title-text-color);
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.172;
-  letter-spacing: 0.03em;
-} */
+
 /* team social */
 
 .team-social {
@@ -434,12 +429,12 @@ img {
   height: 44px;
   border-radius: 50%;
   color: var(--icon-color);
+  transition: color 250ms var(--timing-function);
 }
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: var(--logo1-active-link-text-color);
   color: var(--background-base-nav-button-text);
-  transition: color 250ms var(--timing-function);
 }
 .team-icon {
   fill: currentColor;
@@ -500,14 +495,13 @@ img {
   height: 90px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
-
   color: var(--icon-color);
+  transition: color 250ms var(--timing-function);
 }
 .clients-link:hover,
 .clients-link:focus {
   color: var(--logo1-active-link-text-color);
   border-color: var(--logo1-active-link-text-color);
-  transition: color 250ms var(--timing-function);
 }
 .clients-icon {
   width: 45;
